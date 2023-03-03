@@ -8,7 +8,7 @@ class Widgets {
     final Widget? suffix,
   }) {
     return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 25),
+        padding: const EdgeInsets.symmetric(vertical: 11, horizontal: 25),
         child: SizedBox(
           height: 50,
           child: TextFormField(

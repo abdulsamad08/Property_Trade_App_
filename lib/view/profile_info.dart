@@ -12,79 +12,82 @@ class ProfileInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.only(left: 25, top: 20),
-              alignment: Alignment.topLeft,
-              child: const Text(
-                'Fill Your Profle',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width * 0.04,
+                top: MediaQuery.of(context).size.height * 0.04),
+            alignment: Alignment.topLeft,
+            child: const Text(
+              'Fill Your Profle',
+              style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 17),
-              child: SizedBox(
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.02,
+                bottom: MediaQuery.of(context).size.height * 0.04),
+            child: SizedBox(
+              child: CircleAvatar(
+                radius: 60,
                 child: CircleAvatar(
-                  radius: 70.0,
-                  child: CircleAvatar(
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 25.0,
-                        child: Icon(
-                          Icons.camera_alt,
-                          size: 18.0,
-                          color: Color(0xff171717),
-                        ),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 20.0,
+                      child: Icon(
+                        Icons.camera_alt,
+                        size: MediaQuery.of(context).size.height * 0.032,
+                        color: Color(0xff171717),
                       ),
                     ),
-                    radius: 80.0,
-                    backgroundImage: AssetImage(ImageConstants.defaultProfile),
                   ),
+                  radius: 70.0,
+                  backgroundImage: AssetImage(ImageConstants.defaultProfile),
                 ),
               ),
             ),
-            Widgets.textFormField(label: 'Full Name'),
-            Widgets.textFormField(label: 'NickName'),
-            Widgets.textFormField(
-              label: 'Date Of Birth',
-              suffix: const Icon(
-                Icons.celebration_rounded,
-              ),
+          ),
+          Widgets.textFormField(label: 'Full Name'),
+          Widgets.textFormField(label: 'NickName'),
+          Widgets.textFormField(
+            label: 'Date Of Birth',
+            suffix: const Icon(
+              Icons.celebration_rounded,
             ),
-            Widgets.textFormField(
-              label: 'Email',
-              suffix: const Icon(
-                Icons.email_outlined,
-              ),
+          ),
+          Widgets.textFormField(
+            label: 'Email',
+            suffix: const Icon(
+              Icons.email_outlined,
             ),
-            Widgets.textFormField(
-              label: 'Gender',
-              suffix: const Icon(
-                CupertinoIcons.triangle_fill,
-                size: 10,
-              ),
+          ),
+          Widgets.textFormField(
+            label: 'Gender',
+            suffix: Icon(
+              CupertinoIcons.triangle_fill,
+              size: MediaQuery.of(context).size.height * 0.02,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              child: RoundButton(
-                name: 'Continue',
-                color: const Color(0xff1E88E5),
-                onPress: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PropertyDetails()));
-                },
-              ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: MediaQuery.of(context).size.height * 0.03,
+              right: MediaQuery.of(context).size.height * 0.03,
             ),
-          ],
-        ),
+            child: RoundButton(
+              name: 'Continue',
+              color: const Color(0xff1E88E5),
+              onPress: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PropertyDetails()));
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

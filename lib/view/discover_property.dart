@@ -13,36 +13,36 @@ class DiscoverProperty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomAppBar(),
-      // bottomNavigationBar: Container(
-      //   height: 45,
-      //   decoration: const BoxDecoration(
-      //       color: Color(0xff0F2F44),
-      //       borderRadius: BorderRadius.only(
-      //           topLeft: Radius.circular(30), topRight: Radius.circular(30))),
-      //   child: Padding(
-      //     padding: const EdgeInsets.symmetric(
-      //       horizontal: 20,
-      //     ),
-      //     child: GNav(
-      //         backgroundColor: const Color(0xff0F2F44),
-      //         color: Colors.white,
-      //         activeColor: Colors.white,
-      //         gap: 8,
-      //         padding: const EdgeInsets.all(10),
-      //         tabs: [
-      //           GButton(
-      //             onPressed: () {},
-      //             icon: Icons.home,
-      //             text: 'Home',
-      //           ),
-      //           GButton(onPressed: () {}, icon: Icons.search, text: 'Search'),
-      //           GButton(
-      //               onPressed: () {}, icon: Icons.card_travel, text: 'cart'),
-      //           GButton(onPressed: () {}, icon: Icons.person, text: 'Person'),
-      //         ]),
-      //   ),
-      // ),
+      // bottomNavigationBar: BottomAppBar(),
+      bottomNavigationBar: Container(
+        height: MediaQuery.of(context).size.height * 0.065,
+        decoration: const BoxDecoration(
+            color: Color(0xff0F2F44),
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+          ),
+          child: GNav(
+              backgroundColor: const Color(0xff0F2F44),
+              color: Colors.white,
+              activeColor: Colors.white,
+              gap: 8,
+              padding: const EdgeInsets.all(10),
+              tabs: [
+                GButton(
+                  onPressed: () {},
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+                GButton(onPressed: () {}, icon: Icons.search, text: 'Search'),
+                GButton(
+                    onPressed: () {}, icon: Icons.card_travel, text: 'cart'),
+                GButton(onPressed: () {}, icon: Icons.person, text: 'Person'),
+              ]),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -50,7 +50,8 @@ class DiscoverProperty extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
+              padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.03),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -88,18 +89,22 @@ class DiscoverProperty extends StatelessWidget {
                 FontWeight.w800,
                 24,
                 GoogleFonts.mulish()),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.015,
             ),
             CatogoriesWidget(),
             Padding(
-              padding: const EdgeInsets.only(top: 30, bottom: 10),
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.02,
+                  bottom: MediaQuery.of(context).size.height * 0.014),
               child: textstile('Best for you', const Color(0xff0F2F44),
                   FontWeight.w600, 16, GoogleFonts.mulish),
             ),
             const HouseWidget(),
             Padding(
-              padding: const EdgeInsets.only(top: 15, bottom: 10),
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.02,
+                  bottom: MediaQuery.of(context).size.height * 0.014),
               child: textstile('Nearby your Location', const Color(0xff0F2F44),
                   FontWeight.w600, 16, GoogleFonts.mulish),
             ),

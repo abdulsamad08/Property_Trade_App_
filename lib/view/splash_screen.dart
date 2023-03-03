@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Center(
           child: Image(
             image: AssetImage(ImageConstants.splashLogo),
-            height: 300,
+            height: MediaQuery.of(context).size.height * 0.3,
           ),
         ),
       ),

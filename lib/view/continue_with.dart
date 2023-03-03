@@ -18,8 +18,7 @@ class ContinueWith extends StatelessWidget {
             children: [
               Image(
                 image: AssetImage(ImageConstants.splashLogo),
-                height: 175,
-                width: 175,
+                height: MediaQuery.of(context).size.height * 0.23,
               ),
               const Text(
                 "Let's you in",
@@ -34,7 +33,7 @@ class ContinueWith extends StatelessWidget {
                       child: OutlinedButton.icon(
                         icon: Image(
                           image: AssetImage(ImageConstants.facebookLogo),
-                          width: 20.0,
+                          width: MediaQuery.of(context).size.width * 0.055,
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -50,7 +49,7 @@ class ContinueWith extends StatelessWidget {
                       child: OutlinedButton.icon(
                         icon: Image(
                           image: AssetImage(ImageConstants.googleLogo),
-                          width: 20.0,
+                          width: MediaQuery.of(context).size.width * 0.055,
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -66,7 +65,7 @@ class ContinueWith extends StatelessWidget {
                       child: OutlinedButton.icon(
                         icon: Image(
                           image: AssetImage(ImageConstants.appleLogo),
-                          width: 20.0,
+                          width: MediaQuery.of(context).size.width * 0.055,
                         ),
                         onPressed: () {
                           Navigator.push(
@@ -77,8 +76,8 @@ class ContinueWith extends StatelessWidget {
                         label: const Text('Continue with Apple'),
                       ),
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.035,
                     ),
                     Row(children: [
                       Expanded(

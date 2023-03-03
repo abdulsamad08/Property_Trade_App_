@@ -14,7 +14,11 @@ class PropertyDetails extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 37, right: 37, top: 15),
+            padding: EdgeInsets.only(
+                left: MediaQuery.of(context).size.height * 0.04,
+                right: MediaQuery.of(context).size.height * 0.04,
+                top: MediaQuery.of(context).size.height * 0.06,
+                bottom: MediaQuery.of(context).size.height * 0.02),
             child: Row(
               children: [
                 Center(
@@ -23,8 +27,8 @@ class PropertyDetails extends StatelessWidget {
                 ),
                 const Spacer(),
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  width: MediaQuery.of(context).size.width * 0.12,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xffEAF1FF),
@@ -37,33 +41,33 @@ class PropertyDetails extends StatelessWidget {
           Container(
             child: Image.asset(
               ImageConstants.craftsmanHouse,
-              height: 310,
-              width: 311,
+              width: MediaQuery.of(context).size.width * 0.7,
               fit: BoxFit.contain,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 37),
+            padding: const EdgeInsets.only(left: 37, right: 37, top: 10),
             child: Row(
               children: [
                 Column(
                   children: [
                     RichText(
-                      text: const TextSpan(
-                        style: TextStyle(color: Colors.black, fontSize: 36),
+                      text: TextSpan(
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 36),
                         children: [
                           WidgetSpan(
                               child: SizedBox(
-                            height: 6,
+                            height: MediaQuery.of(context).size.height * 0.05,
                           )),
-                          TextSpan(
+                          const TextSpan(
                             text: 'CRAFTSMAN HOUSE\n',
                             style: TextStyle(
                                 color: Color(0xff171717),
                                 fontSize: 20,
                                 fontWeight: FontWeight.w800),
                           ),
-                          TextSpan(
+                          const TextSpan(
                             text: '520 N Beaudry Ave, Los Angeles',
                             style: TextStyle(
                                 color: Color(0xff0F2F44), fontSize: 14),
@@ -75,8 +79,8 @@ class PropertyDetails extends StatelessWidget {
                 ),
                 const Spacer(),
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: MediaQuery.of(context).size.height * 0.057,
+                  width: MediaQuery.of(context).size.width * 0.12,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xffEAF1FF),
@@ -89,8 +93,11 @@ class PropertyDetails extends StatelessWidget {
             ),
           ),
           Padding(
-            padding:
-                const EdgeInsets.only(left: 35, top: 10, right: 97, bottom: 22),
+            padding: EdgeInsets.only(
+                left: 35,
+                top: 10,
+                right: 97,
+                bottom: MediaQuery.of(context).size.height * 0.01),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -113,7 +120,10 @@ class PropertyDetails extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 36, left: 36, bottom: 10),
+            padding: EdgeInsets.only(
+                right: 36,
+                left: 36,
+                bottom: MediaQuery.of(context).size.height * 0.01),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -121,25 +131,25 @@ class PropertyDetails extends StatelessWidget {
                   radius: 32,
                   backgroundImage: AssetImage(ImageConstants.avatarpic1),
                 ),
-                const SizedBox(
-                  width: 12,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.03,
                 ),
                 RichText(
-                  text: const TextSpan(
-                    style: TextStyle(color: Colors.black, fontSize: 36),
+                  text: TextSpan(
+                    style: const TextStyle(color: Colors.black, fontSize: 36),
                     children: [
                       WidgetSpan(
                           child: SizedBox(
-                        height: 6,
+                        height: MediaQuery.of(context).size.height * 0.039,
                       )),
-                      TextSpan(
+                      const TextSpan(
                         text: 'Rebecca Tetha\n',
                         style: TextStyle(
                             color: Color(0xff171717),
                             fontSize: 14,
                             fontWeight: FontWeight.w700),
                       ),
-                      TextSpan(
+                      const TextSpan(
                         text: 'Owner Craftsman House',
                         style: TextStyle(
                             color: Color(0xff0F2F44),
@@ -151,8 +161,8 @@ class PropertyDetails extends StatelessWidget {
                 ),
                 const Spacer(),
                 Container(
-                  height: 30,
-                  width: 84,
+                  height: MediaQuery.of(context).size.height * 0.04,
+                  width: MediaQuery.of(context).size.width * 0.23,
                   decoration: BoxDecoration(
                       color: const Color(0xff103144),
                       borderRadius: BorderRadius.circular(10)),
@@ -185,8 +195,11 @@ class PropertyDetails extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Padding(
-                padding: const EdgeInsets.only(
-                    right: 37, left: 36, top: 10, bottom: 20),
+                padding: EdgeInsets.only(
+                    right: 37,
+                    left: 36,
+                    top: MediaQuery.of(context).size.height * 0.03,
+                    bottom: MediaQuery.of(context).size.height * 0.01),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -224,8 +237,8 @@ class PropertyDetails extends StatelessWidget {
                                         const DiscoverProperty()));
                           },
                           child: Container(
-                              height: 36,
-                              width: 128,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              width: MediaQuery.of(context).size.width * 0.36,
                               decoration: BoxDecoration(
                                   color: const Color(0xff103144),
                                   borderRadius: BorderRadius.circular(10)),

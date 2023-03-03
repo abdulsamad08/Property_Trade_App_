@@ -12,14 +12,16 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.only(
+          top: MediaQuery.of(context).size.height * 0.01,
+          bottom: MediaQuery.of(context).size.height * 0.02),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           for (var item in pics)
             Container(
-                height: 50,
-                width: 50,
+                height: MediaQuery.of(context).size.height * 0.061,
+                // width: 50,
                 decoration: BoxDecoration(
                   border: Border.all(width: 3, color: Colors.white),
                   borderRadius: BorderRadius.circular(5),

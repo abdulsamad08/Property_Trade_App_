@@ -24,18 +24,17 @@ class LoginScreen extends StatelessWidget {
           children: [
             Image(
               image: AssetImage(ImageConstants.loginPageLogo),
-              height: 120,
-              width: 120,
+              height: MediaQuery.of(context).size.height * 0.17,
             ),
-            const SizedBox(
-              height: 18,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.016,
             ),
             const Text(
               'Login to Your Account',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(
-              height: 16,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.020,
             ),
             Widgets.textFormField(
                 prefix: const Icon(Icons.email),
@@ -85,30 +84,35 @@ class LoginScreen extends StatelessWidget {
                 Row(children: [
                   Expanded(
                     child: Container(
-                        margin:
-                            const EdgeInsets.only(right: 20, left: 20, top: 3),
+                        margin: EdgeInsets.only(
+                            right: MediaQuery.of(context).size.width * 0.03,
+                            left: MediaQuery.of(context).size.width * 0.03,
+                            top: MediaQuery.of(context).size.height * 0.0029),
                         child: const Divider()),
                   ),
                   const Text(
                     "or continue with",
-                    style: TextStyle(fontSize: 15),
+                    style: TextStyle(fontSize: 13),
                   ),
                   Expanded(
                     child: Container(
-                        margin:
-                            const EdgeInsets.only(right: 20, left: 20, top: 3),
+                        margin: EdgeInsets.only(
+                            right: MediaQuery.of(context).size.width * 0.03,
+                            left: MediaQuery.of(context).size.width * 0.03,
+                            top: MediaQuery.of(context).size.height * 0.0023),
                         child: const Divider()),
                   ),
                 ]),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                  padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height * 0.055),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       for (var item in images)
                         Container(
-                            height: 50,
-                            width: 80,
+                            height: MediaQuery.of(context).size.height * 0.08,
+                            width: MediaQuery.of(context).size.width * 0.19,
                             decoration: BoxDecoration(
                               border: Border.all(
                                   width: 2,
@@ -121,7 +125,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                  padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height * 0.030),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

@@ -14,8 +14,9 @@ class CatogoriesWidget extends StatelessWidget {
           for (var text in text)
             InkWell(
               child: Container(
-                height: 40,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
+                height: MediaQuery.of(context).size.height * 0.05,
+                margin: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.height * 0.01),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(

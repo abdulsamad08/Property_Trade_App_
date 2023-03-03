@@ -9,8 +9,8 @@ class NearByLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 330,
+      height: MediaQuery.of(context).size.height * 0.1,
+      // width: MediaQuery.of(context).size.height * 0.7,
       decoration: const BoxDecoration(
         color: Color(0xffEAF1FF),
       ),
@@ -24,7 +24,10 @@ class NearByLocation extends StatelessWidget {
             fit: BoxFit.contain,
           ),
           Padding(
-              padding: const EdgeInsets.only(left: 15.0, top: 15, bottom: 12),
+              padding: EdgeInsets.only(
+                  left: 15.0,
+                  top: 15,
+                  bottom: MediaQuery.of(context).size.height * 0.002),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,8 +59,8 @@ class NearByLocation extends StatelessWidget {
                           9,
                           GoogleFonts.mulish(),
                         ),
-                        const SizedBox(
-                          width: 10,
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.05,
                         ),
                         Image.asset(
                           ImageConstants.bath,
@@ -70,8 +73,8 @@ class NearByLocation extends StatelessWidget {
                           9,
                           GoogleFonts.mulish(),
                         ),
-                        const SizedBox(
-                          width: 10,
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.05,
                         ),
                         Image.asset(
                           ImageConstants.car,
