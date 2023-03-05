@@ -1,8 +1,12 @@
 # craftsman_ui
 
-A new Flutter project.
+Property Trade App UI.
 
 ## Getting Started
+
+# Output
+
+https://user-images.githubusercontent.com/116899821/222908647-2fd984f1-5dab-49b4-852c-292ed3c2be3d.mp4
 
 This project is a starting point for a Flutter application.
 
