@@ -5,7 +5,7 @@ import 'package:craftsman_ui/widgets/properties.dart';
 import 'package:craftsman_ui/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
+import '../widgets/bottm_nav_bar.dart';
 
 class DiscoverProperty extends StatelessWidget {
   const DiscoverProperty({super.key});
@@ -13,36 +13,7 @@ class DiscoverProperty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: BottomAppBar(),
-      bottomNavigationBar: Container(
-        height: MediaQuery.of(context).size.height * 0.065,
-        decoration: const BoxDecoration(
-            color: Color(0xff0F2F44),
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30), topRight: Radius.circular(30))),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-          ),
-          child: GNav(
-              backgroundColor: const Color(0xff0F2F44),
-              color: Colors.white,
-              activeColor: Colors.white,
-              gap: 8,
-              padding: const EdgeInsets.all(10),
-              tabs: [
-                GButton(
-                  onPressed: () {},
-                  icon: Icons.home,
-                  text: 'Home',
-                ),
-                GButton(onPressed: () {}, icon: Icons.search, text: 'Search'),
-                GButton(
-                    onPressed: () {}, icon: Icons.card_travel, text: 'cart'),
-                GButton(onPressed: () {}, icon: Icons.person, text: 'Person'),
-              ]),
-        ),
-      ),
+      bottomNavigationBar: const NavBarto(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
